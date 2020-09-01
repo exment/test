@@ -51,6 +51,19 @@ git status
 # 从暂存区将文件恢复到工作区
 git checkout index.html
 
-# 查看修改
+# 查看修改 工作区和暂存区版本区别
 git diff
+
+# clear 清空控制台
+
+# 查看已经提交过的历史版本
+git log
+
+# 恢复文件到指定的某一个版本
+# 退回到上一个版本
+git reset --hard HEAD^ 
+# 退回两个版本
+git reset --hard HEAD^^
+
+git reset --hard 指定版本号
 ```
