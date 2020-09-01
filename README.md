@@ -44,6 +44,7 @@ git commit -m "这一次提交的描述"
 ```
 
 5. 工作区状态
+
 ```sh
 # 当前工作区状态 是否有改变的文件
 git status
@@ -67,3 +68,24 @@ git reset --hard HEAD^^
 
 git reset --hard 指定版本号
 ```
+
+6. 远程仓库
+
+不能随意提交
+必须让github对自己电脑授权
+
+* ssh密钥
+ssh-keygen -t rsa -C "github邮箱账户"
+用户家目录的.ssh文件夹下生成
+id_rsa.pub
+
+* github 上打开 个人中心settings
+SSH 选项 新增一个刚才看到的id_rsa.pub文件
+
+* 暂存区-》远程仓库
+```sh
+git remote add origin https://github.com/exment/test.git
+git push -u origin master
+```
+
+提交过程中 可能输入用户名密码
