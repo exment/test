@@ -1,0 +1,17 @@
+develop
+    2f5f
+    0472
+    bcd5
+git checkout develop_fixbug
+git add .
+git commit -m "add 1.txt"
+    703e
+git add .
+git commit -m "add 2.txt"
+    87f7
+
+git reabse –i develop 将当前分支重新设置开始点 develop -i指的是交互模式
+pick xxx add 1.txt
+pick xxx add 2.txt
+
+test

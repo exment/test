@@ -97,8 +97,24 @@ git pull origin master --allow-unrelated-histories
 # 把本地仓库的文件推送到远程仓库
 # git push 远程主机名 本地分支名:远程分支名
 git push -u origin master
+# 后面只需要
+git push
 ```
 
 * 使用git clone 就不会出现类似问题
+从远程仓库克隆到本地
+git clone 克隆仓库并自动将其添加为远程仓库并默认以 “origin” 为简写
+写代码之前要 git pull 相当于git fetch 和 git merge
 
 提交过程中 可能输入用户名密码
+
+
+## 图示
+
+远程仓库    ->   本地仓库      ->   工作区
+remote          repository      workspace
+
+## git pull
+是 git fetch和 git merge 命令组合体
+
+git fetch [remote-name] 拉取所有数据 不会自动合并或修改当前工作
