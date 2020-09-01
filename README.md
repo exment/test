@@ -30,11 +30,27 @@ git config --global user.email "exment@qq.com"
 # 建立暂存区
 git init
 ```
+
 3. 本地文件夹 README.md 说明书
     编写程序
+
 4. 工作区 -》 暂存区
 ```sh
 # 工作区 提交暂存区
-git add
+git add 文件名
+git add * 提交所有文件
+
+git commit -m "这一次提交的描述"
 ```
-    git add
+
+5. 工作区状态
+```sh
+# 当前工作区状态 是否有改变的文件
+git status
+
+# 从暂存区将文件恢复到工作区
+git checkout index.html
+
+# 查看修改
+git diff
+```
