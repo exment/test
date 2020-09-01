@@ -84,8 +84,21 @@ SSH 选项 新增一个刚才看到的id_rsa.pub文件
 
 * 暂存区-》远程仓库
 ```sh
+# 本地仓库添加了github上的git仓库作为远程仓库，起名origin
+# git remote add 添加远程仓库 origin 远程仓库名字 可以自定义 后面再加上url
 git remote add origin https://github.com/exment/test.git
+# 查看远程仓库 看到远程仓库已经添加成功 fetch用于拉取push用于推送
+git remote -v
+# 把本地仓库的变化连接到远程仓库主分支
+git pull origin master
+# 在pull命令后加上 --allow-unrelated-history 合并两个独立启动仓库的历史
+# 将远程昂库文件拉取到本地仓库
+git pull origin master --allow-unrelated-histories
+# 把本地仓库的文件推送到远程仓库
+# git push 远程主机名 本地分支名:远程分支名
 git push -u origin master
 ```
+
+* 使用git clone 就不会出现类似问题
 
 提交过程中 可能输入用户名密码
